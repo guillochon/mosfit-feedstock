@@ -58,6 +58,8 @@ test:
   source_files:
     - test.py
     - test.sh
+    - mosfit/tests/LSQ12dlf.json
+    - mosfit/tests/SN2006le.json
   commands:
     - ./test.sh 2>&1 | cat  # [not win]
 
