@@ -1,6 +1,6 @@
 {% set name = "mosfit" %}
-{% set version = "0.5.6" %}
-{% set sha256 = "9888fd90acc0c198b68a01dbb2d5aa3931d51bc9f1ffed51e4e7560d89193ab9" %}
+{% set version = "0.5.10" %}
+{% set sha256 = "6d6c43ad045a8cbafe51afd7ae9406e044db30f19c794e902d8c241fc7cf8b28" %}
 
 package:
   name: {{ name|lower }}
@@ -55,11 +55,15 @@ requirements:
 test:
   imports:
     - mosfit
+  files:
+    - forge_test.sh
   source_files:
     - test.py
     - test.sh
+    - mosfit/tests/LSQ12dlf.json
+    - mosfit/tests/SN2006le.json
   commands:
-    - ./test.sh 2>&1 | cat  # [not win]
+    - ./forge_test.sh  # [not win]
 
 about:
   home: http://github.com/guillochon/mosfit
