@@ -63,7 +63,7 @@ test:
     - mosfit/tests/LSQ12dlf.json
     - mosfit/tests/SN2006le.json
   commands:
-    - ./forge_test.sh  # [not win]
+    - time bash ./forge_test.sh  # [not win]
 
 about:
   home: http://github.com/guillochon/mosfit
