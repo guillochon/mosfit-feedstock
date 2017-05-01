@@ -13,13 +13,7 @@ function my_mpirun() {
 
 my_mpirun -np 2 python -m mosfit -e SN2009do --test -i 1 -f 1 -p 0 -F covariance
 
-python -m mosfit -e SN2009do.json --test -i 1 --no-fracking -m magnetar \
-       -T 2 -F covariance
-
 python -m mosfit -e SN2007bg --test -i 1 --no-fracking -m ic
-
-python -m mosfit -e 09do --test -i 1 --no-fracking -m slsn -S 20 -E 10.0 100.0 \
-       -g -c --no-copy-at-launch -x radiusphot
 
 python -m mosfit --test -i 0
 
