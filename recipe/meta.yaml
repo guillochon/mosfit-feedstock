@@ -62,6 +62,7 @@ test:
     - test.sh
     - mosfit/tests/LSQ12dlf.json
     - mosfit/tests/SN2006le.json
+    - requirements.txt
   commands:
     - time bash ./forge_test.sh  # [not win]
 
