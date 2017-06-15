@@ -1,6 +1,7 @@
 {% set name = "mosfit" %}
-{% set version = "0.6.1" %}
-{% set sha256 = "5964c374610252a726549fd0bffe91b95c158714401d68535425e413fc060059" %}
+{% set version = "0.6.2" %}
+{% set sha256 = "1c6d16cfb6d91b5394572c14405f2e91bf102f9170dc9d94efcf294e2d39d8da" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -62,7 +63,6 @@ test:
     - test.sh
     - mosfit/tests/LSQ12dlf.json
     - mosfit/tests/SN2006le.json
-    - requirements.txt
   commands:
     - time bash ./forge_test.sh  # [not win]
 
