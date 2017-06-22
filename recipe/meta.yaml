@@ -1,7 +1,7 @@
 {% set name = "mosfit" %}
 {% set version = "0.6.2" %}
 {% set sha256 = "1c6d16cfb6d91b5394572c14405f2e91bf102f9170dc9d94efcf294e2d39d8da" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -20,7 +20,7 @@ requirements:
   build:
     - python
     - setuptools
-    - scipy
+    - scipy !=0.19.0
     - astrocats
     - astropy
     - cython
@@ -37,7 +37,7 @@ requirements:
     - six
   run:
     - python
-    - scipy
+    - scipy !=0.19.0
     - astrocats
     - astropy
     - cython
