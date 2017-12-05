@@ -6,6 +6,10 @@
 
 set -e -x
 
+# 2017 Dec 4: Work around SSL problem; see https://github.com/conda-forge/mosfit-feedstock/issues/23
+unset REQUESTS_CA_BUNDLE
+unset SSL_CERT_FILE
+
 function my_mpirun() {
     # Work around bug in mpich mpirun that leaves stdin/stdout
     # with the O_NONBLOCK flag set, which causes problems in various
