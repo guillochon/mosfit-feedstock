@@ -1,6 +1,6 @@
 {% set name = "mosfit" %}
-{% set version = "0.7.20" %}
-{% set sha256 = "91d348820f92e661121f4f335e7706e659af5da84b8354148ad84a7da65155e9"%}
+{% set version = "1.0.0rc1" %}
+{% set sha256 = "588d8968020b658ce5c46c1cf34b882d30fe5fe02a1ed50094e5494d1332f057"%}
 {% set build = 0 %}
 
 package:
