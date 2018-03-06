@@ -1,7 +1,6 @@
 {% set name = "mosfit" %}
 {% set version = "1.0.1" %}
 {% set sha256 = "9d8768bcb8e83f8c667a9c3805c29350239355f5782a784ca85992d28a29411c"%}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +12,9 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: {{ build }}
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
